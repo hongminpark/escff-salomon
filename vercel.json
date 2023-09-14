@@ -1,0 +1,26 @@
+{
+  "headers": [
+    {
+      "source": "/Build/(.*)\\.gz",
+      "headers": [
+        {
+          "key": "Content-Encoding",
+          "value": "gzip"
+        }
+      ]
+    },
+    {
+      "source": "/Build/(.*)\\.wasm",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/wasm"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/Build/UnityLoader.js", "destination": "/Build/UnityLoader.js" }
+  ]
+}
+
