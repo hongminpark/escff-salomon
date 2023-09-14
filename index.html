@@ -6,6 +6,11 @@
     <title>Unity WebGL Player | FirstUnity</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+        <style>
+            body {
+                font-family: "Helvetica Neue", Arial, sans-serif;
+            }
+        </style>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -17,12 +22,35 @@
         </div>
       </div>
       <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">FirstUnity</div>
-      </div>
-    </div>
+            <div id="unity-footer" style="display: flex; align-items: center">
+                <div id="unity-build-title">
+                    created by
+                    <a
+                        href="http://hongminpark.univer.se"
+                        style="
+                            text-decoration: none;
+                            border-bottom: 1px solid;
+                            color: black;
+                        "
+                        >hongminpark</a
+                    >,
+                    <a
+                        href="https://hongminpark.univer.se/esc-credits"
+                        style="
+                            text-decoration: none;
+                            border-bottom: 1px solid;
+                            color: black;
+                        "
+                        >credits</a
+                    >
+                </div>
+                <div
+                    id="unity-fullscreen-button"
+                    style="width: 14px; height: 14px; background-size: cover"
+                ></div>
+                <!-- <div id="unity-build-title">FirstUnity</div> -->
+            </div>
+          </div>
     <script>
 
       var container = document.querySelector("#unity-container");
@@ -57,11 +85,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/final.loader.js";
+      var loaderUrl = buildUrl + "/build02.loader.js";
       var config = {
-        dataUrl: buildUrl + "/final.data.gz",
-        frameworkUrl: buildUrl + "/final.framework.js.gz",
-        codeUrl: buildUrl + "/final.wasm.gz",
+        dataUrl: buildUrl + "/build02.data.gz",
+        frameworkUrl: buildUrl + "/build02.framework.js.gz",
+        codeUrl: buildUrl + "/build02.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "FirstUnity",
@@ -120,3 +148,4 @@
     </script>
   </body>
 </html>
+
